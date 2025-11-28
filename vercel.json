@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "framework": "vite",
   "builds": [
     { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
+      "has": [
+        { "type": "header", "key": "accept", "value": "text/html" }
+      ],
       "dest": "/index.html"
     }
   ]
