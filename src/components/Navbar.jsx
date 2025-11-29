@@ -11,6 +11,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full bg-white shadow p-3 px-6 flex justify-between items-center mb-4">
+      <img src="/G2T.png" alt="GoalToTasks.AI Logo" className="h-8 mr-3" />
       <h1 className="font-semibold text-xl">GoalToTasks.AI</h1>
       <button
         onClick={logout}
