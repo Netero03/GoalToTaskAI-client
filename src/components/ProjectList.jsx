@@ -69,7 +69,7 @@ async function openProject(p) {
             </div>
             <div className="flex flex-col items-end gap-2">
               <div className="text-xs text-slate-400">{new Date(p.createdAt).toLocaleDateString()}</div>
-              <button title="Delete project" onClick={() => handleDelete(p)} className="p-1 rounded hover:bg-red-50">
+              <button title="Delete project" onClick={() => handleDelete(p)} className="p-1 rounded bg-slate-200 hover:bg-red-50">
                 <Trash2 size={16} />
               </button>
             </div>

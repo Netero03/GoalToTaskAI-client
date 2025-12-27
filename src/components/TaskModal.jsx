@@ -45,7 +45,7 @@ export default function TaskModal({ open, onClose, onSave, initial = {}, default
       <form onSubmit={handleSubmit} className="z-50 bg-white rounded-lg p-4 w-full max-w-md shadow">
         <div className="flex justify-between items-center mb-3">
           <h3 className="text-lg font-semibold">{initial._id ? 'Edit Task' : 'Create Task'}</h3>
-          <button type="button" onClick={() => onClose()}><X /></button>
+          <button className='bg-slate-200 p-1 rounded' type="button" onClick={() => onClose()}><X /></button>
         </div>
 
         <div className="space-y-2">
@@ -85,7 +85,7 @@ export default function TaskModal({ open, onClose, onSave, initial = {}, default
         </div>
 
         <div className="mt-4 flex justify-end gap-2">
-          <button type="button" onClick={() => onClose()} className="px-3 py-2 rounded border">Cancel</button>
+          <button type="button" onClick={() => onClose()} className="px-3 py-2 rounded border bg-slate-200">Cancel</button>
           <button type="submit" disabled={loading} className="px-4 py-2 bg-indigo-600 text-white rounded flex items-center gap-2">
             <Save size={16} />
             {loading ? 'Saving...' : 'Save'}

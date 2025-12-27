@@ -39,7 +39,7 @@ export default function TaskCard({ id, task, onEdit, onDelete }) {
 
           <button
             title="Edit"
-            className="p-1 rounded hover:bg-slate-100"
+            className="p-1 rounded bg-slate-200 hover:bg-slate-100"
             onPointerDownCapture={stopAll}   
             onClick={(e) => {
               stopAll(e);                   
@@ -51,7 +51,7 @@ export default function TaskCard({ id, task, onEdit, onDelete }) {
 
           <button
             title="Delete"
-            className="p-1 rounded hover:bg-slate-100"
+            className="p-1 rounded bg-slate-200 hover:bg-slate-100"
             onPointerDownCapture={stopAll}   
             onClick={(e) => {
               stopAll(e);                   
