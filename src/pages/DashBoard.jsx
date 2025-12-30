@@ -11,7 +11,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
       <header className="max-w-8xl mx-auto mb-6 px-6 pt-6">
-        <h1 className="text-3xl font-semibold">GoalToTasks — AI Project Planner</h1>
+        <h1 className="text-3xl font-semibold">GoalToTasks — AI Planner</h1>
         <p className="text-sm text-slate-600">Describe a goal, generate tasks with Gemini, and manage on Kanban.</p>
       </header>
 
@@ -34,7 +34,7 @@ export default function Dashboard() {
               <Kanban project={activeProject} onUpdateProject={setActiveProject} />
             ) : (
               <div className="text-center text-slate-500 py-20">
-                Open a project from left or generate one using the form.
+                Open a goal from left or generate one using the form.
               </div>
             )}
           </div>

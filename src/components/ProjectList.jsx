@@ -28,7 +28,7 @@ export default function ProjectList({ onOpen }) {
 
   async function handleDelete(project) {
   const ok = await confirmDialog({
-    title: "Delete Project?",
+    title: "Delete Goal?",
     message: `Are you sure you want to delete "${project.title}"? This cannot be undone.`
   });
 
@@ -57,12 +57,12 @@ async function openProject(p) {
 
   return (
     <div>
-      <h3 className="font-medium mb-3">Your Projects</h3>
+      <h3 className="font-medium mb-3">Your Goals</h3>
       <div className="space-y-2 max-h-64 overflow-auto">
         {loading && <div className="text-sm text-slate-500">Loading...</div>}
-        {projects.length === 0 && !loading && <div className="text-sm text-slate-500">No projects yet</div>}
+        {projects.length === 0 && !loading && <div className="text-sm text-slate-500">No goals yet</div>}
         {projects.map(p => (
-          <div key={p._id} className="flex items-start justify-between p-3 border rounded hover:bg-slate-50">
+          <div key={p._id} className="flex items-start justify-between p-3 border rounded hover:bg-slate-50 hover:cursor-pointer">
             <div className="flex-1 text-left" onClick={() => openProject(p)}>
               <div className="font-semibold">{p.title}</div>
               <div className="text-xs text-slate-500">{p.description}</div>
