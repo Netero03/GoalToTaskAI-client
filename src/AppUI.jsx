@@ -5,10 +5,11 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/DashBoard';
 import ProtectedRoute from './router/ProtectedRoute';
+import ThemeProvider from './theme/ThemeProvider';
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider>
       <Toaster position="top-right"  />
       <Routes >
         <Route path="/login" element={<Login />} />
@@ -23,6 +24,6 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }

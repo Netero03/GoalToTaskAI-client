@@ -31,7 +31,7 @@ export default function Login() {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 relative">
       <form
         onSubmit={handleLogin}
         className="w-full max-w-sm bg-white p-6 rounded-lg shadow space-y-3"
@@ -69,6 +69,18 @@ export default function Login() {
           <Link to="/signup" className="text-indigo-600">Sign up</Link>
         </div>
       </form>
+      {/* Bottom right alert */}
+      <div className="fixed bottom-4 right-4 max-w-xs bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded shadow-lg text-sm z-50">
+        <div className="font-semibold mb-1">Note</div>
+        <div>
+          If logging in takes a while, please wait a few seconds for the server to start (Render free tier may sleep when idle).
+        </div>
+        <div className="mt-2">
+          <span className="font-semibold">Example login:</span><br/>
+          Email: <span className="font-mono">user@example.com</span><br/>
+          Password: <span className="font-mono">password</span>
+        </div>
+      </div>
     </div>
   );
 }

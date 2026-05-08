@@ -18,13 +18,18 @@ export default function ProjectList({ onOpen }) {
         const data = await listProjects();
         setProjects(data);
       } catch (err) {
+        if (err?.response?.status === 401) {
+          toast.error('Session expired. Please login again.');
+          return;
+        }
+        toast.error('Failed to load goals.');
         console.error(err);
       } finally {
         setLoading(false);
       }
     }
     load();
-  }, []);
+  }, [setProjects]);
 
   async function handleDelete(project) {
   const ok = await confirmDialog({
